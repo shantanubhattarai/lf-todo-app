@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Mono", monospace;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+.clearFix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.App {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.toDoListContainer {
+  padding: 15px;
+}
+
+.toDoContent {
+  background-color: #fff;
+}
+
+.toDoTitle {
+  margin: 40px 0;
+}
+
+.toDoForm {
+  width: 100%;
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0px 2px #eee;
+}
+
+input[type="text"]:focus {
+  border-bottom: 2px #cf1a30 solid;
+}
+
+button {
+  border-radius: 4px;
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.searchBar {
+  margin-bottom: 30px;
+}
+
+.searchBar:focus {
+  margin-bottom: 28px;
+}
+
+.toDoForm__input {
+  margin-bottom: 15px;
+}
+
+.toDoForm__input:focus {
+  margin-bottom: 13px;
+}
+
+.toDoForm__button {
+  border: none;
+  outline: none;
+
+  display: block;
+  width: 100%;
+
+  padding: 16px;
+  background-color: #e71d36;
+  color: white;
+}
+
+.toDoForm__button:hover {
+  background-color: #cf1a30;
+}
+
+.tasksList {
+  list-style: none;
+  padding: 15px 0;
+}
+
+.tasksList li {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #fff;
+  margin: 8px 0px;
+  border-radius: 4px;
+  box-shadow: 0px 2px #eee;
+}
+
+.deleteBtn {
+  float: right;
+  vertical-align: middle;
+  background-color: #e71d36;
+  border: none;
+  outline: none;
+  color: white;
+  max-width: 25%;
+}
+
+.pullLeft {
+  float: left;
+}
+
+.todoCheck {
+  margin-top: 13px;
+  margin-right: 12px;
+  padding: 5px;
+  max-width: 10%;
+}
+
+.todoText {
+  margin-top: 8px;
+  width: 55%;
+}
+
+.checked {
+  color: #6c757d;
+}
+
+.checked .todoText {
+  text-decoration: line-through;
+}
+
+.toDoFilters {
+  margin-bottom: 50px;
+}
+
+.filter-box {
+  display: inline-block;
+  background-color: #1b998b;
+  border-radius: 8px;
+  padding: 16px;
+  color: white;
+  margin-right: 16px;
+}
+
+.filter-box:hover {
+  background-color: #18897d;
+}
+
+.filter-box:focus {
+  background-color: #1fc98b;
+}
+
+.filter-icon {
+  display: block;
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+div.form-group {
+  margin: 15px 0px;
+}
+
+.topBar {
+  padding: 16px 0px;
+  text-align: right;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.topBar a {
+  padding: 16px 16px;
+  margin-left: 16px;
+  background-color: #1fc98b;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+}
+
+.topBar a:hover {
+  background-color: #18897d;
+}
