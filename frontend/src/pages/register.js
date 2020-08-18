@@ -53,7 +53,11 @@ export default class Register extends React.Component {
           </div>
           <div className="form-group">
             <label>PASSWORD</label>
-            <input type="text" onChange={this.handlePasswordChange} required />
+            <input
+              type="password"
+              onChange={this.handlePasswordChange}
+              required
+            />
           </div>
           <div className="form-group">
             <input

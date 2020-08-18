@@ -10,7 +10,14 @@ function createToken(data) {
 }
 
 router.post("/login", function (req, res, next) {
-  // validate();
+  if (!req.username || req.username.length < 0) {
+    res.send({ status: 400, message: "Empty username" });
+    return;
+  }
+  if (!req.password || req.password.length < 0) {
+    res.send({ status: 400, message: "Empty password" });
+    return;
+  }
   let sqlQuery = `SELECT * FROM users WHERE username='${req.body.username}'`;
   dbconn.connection.query(sqlQuery, function (err, result) {
     if (err) next(err);
@@ -46,6 +53,13 @@ router.post("/register", async (req, res, next) => {
   }
   if (!req.password || req.password.length < 0) {
     res.send({ status: 400, message: "Empty password" });
+    return;
+  }
+  if (req.password.length < 8) {
+    res.send({
+      status: 400,
+      message: "Password must be at least 8 characters",
+    });
     return;
   }
   try {
