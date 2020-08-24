@@ -10,7 +10,7 @@ function createToken(data) {
 }
 
 router.post("/login", function (req, res, next) {
-  if (!req.username || req.username.length < 0) {
+  if (!req.body.username || req.body.username.length < 0) {
     res.send({ status: 400, message: "Empty username" });
     return;
   }
@@ -47,7 +47,7 @@ router.post("/login", function (req, res, next) {
 });
 
 router.post("/register", async (req, res, next) => {
-  if (!req.username || req.username.length < 0) {
+  if (!req.body.username || req.body.username.length < 0) {
     res.send({ status: 400, message: "Empty username" });
     return;
   }
