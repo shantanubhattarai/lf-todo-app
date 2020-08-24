@@ -14,7 +14,7 @@ router.post("/login", function (req, res, next) {
     res.send({ status: 400, message: "Empty username" });
     return;
   }
-  if (!req.password || req.password.length < 0) {
+  if (!req.body.password || req.body.password.length < 0) {
     res.send({ status: 400, message: "Empty password" });
     return;
   }
@@ -51,11 +51,11 @@ router.post("/register", async (req, res, next) => {
     res.send({ status: 400, message: "Empty username" });
     return;
   }
-  if (!req.password || req.password.length < 0) {
+  if (!req.body.password || req.body.password.length < 0) {
     res.send({ status: 400, message: "Empty password" });
     return;
   }
-  if (req.password.length < 8) {
+  if (req.body.password.length < 8) {
     res.send({
       status: 400,
       message: "Password must be at least 8 characters",
